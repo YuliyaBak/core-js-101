@@ -20,7 +20,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-  throw width * height;
+  return width * height;
 }
 
 
