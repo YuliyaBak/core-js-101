@@ -38,7 +38,6 @@ function getFizzBuzz(num) {
   return num;
 }
 
-
 /**
  * Returns the factorial of the specified integer n.
  *
@@ -77,8 +76,6 @@ function getSumBetweenNumbers(n1, n2) {
   }
   return sum;
 }
-
-
 /**
  * Returns true, if a triangle can be built with the specified sides a, b, c
  * and false in any other ways.
@@ -137,8 +134,27 @@ function isTriangle(a, b, c) {
  *   { top:20, left:20, width: 20, height: 20 }    =>  false
  *
  */
-function doRectanglesOverlap(/* rect1, rect2 */) {
-  throw new Error('Not implemented');
+function doRectanglesOverlap(rect1, rect2) {
+  const rec1 = {};
+  const rec2 = {};
+  rec1.x1 = rect1.left;
+  rec1.x2 = rect1.left + rect1.width;
+  rec1.y1 = rect1.top;
+  rec1.y2 = rect1.top + rect1.height;
+
+  rec2.x1 = rect2.left;
+  rec2.x2 = rect2.left + rect2.width;
+  rec2.y1 = rect2.top;
+  rec2.y2 = rect2.top + rect2.height;
+
+
+  if (rec1.x1 >= rec2.x2 || rec2.x1 >= rec1.x2) {
+    return false;
+  }
+  if (rec1.y1 >= rec2.y2 || rec2.y1 >= rec1.y2) {
+    return false;
+  }
+  return true;
 }
 
 
