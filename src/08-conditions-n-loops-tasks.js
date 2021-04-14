@@ -263,7 +263,6 @@ function getIntervalString(a, b, isStartIncluded, isEndIncluded) {
   }
   return `${first}${arr[0]}, ${arr[1]}${end}`;
 }
-}
 
 
 /**
